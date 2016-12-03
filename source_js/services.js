@@ -1,0 +1,1 @@
+var pustackServices = angular.module('pustackServices',[]);
