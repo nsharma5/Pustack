@@ -6,8 +6,8 @@ app.config(function ($routeProvider) {
 			templateUrl:'partials/landing.html',
 			controller: 'landingController'
 		})
-		.when ('/landing/subjects',{
-			templateUrl:'partials/subjects.html',
-			controller: 'subjectController'
+		.when ('/landing/lectures',{
+			templateUrl:'partials/lectures.html',
+			controller: 'lectureController'
 		});
 });

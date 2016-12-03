@@ -7,3 +7,7 @@ pustackControllers.controller('landingController', ['$scope', '$window', functio
 pustackControllers.controller('subjectController', ['$scope', '$window', function($scope, $window) {
 	
 }]);
+
+pustackControllers.controller('lectureController', ['$scope', '$window', function($scope, $window) {
+	
+}]);
