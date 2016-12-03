@@ -6,7 +6,7 @@ app.config(function ($routeProvider) {
 			templateUrl:'partials/landing.html',
 			controller: 'landingController'
 		})
-		.when ('/landing/lectures',{
+		.when ('/lectures',{
 			templateUrl:'partials/lectures.html',
 			controller: 'lectureController'
 		});
