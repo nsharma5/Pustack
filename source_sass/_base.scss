@@ -23,6 +23,22 @@
 
 }
 
+/*LANDING*/
+body {
+    font-size: 12px;
+    max-width: 10000px;
+    background: #F5F5F5;
+    min-width: 960px;
+    width: 100%;
+    font-family: Roboto;
+    text-rendering: optimizeLegibility;
+ /* 2 */
+    -webkit-font-smoothing: antialiased;
+ /* 3 */
+    -moz-osx-font-smoothing: grayscale;
+ /* 4 */
+}
+
 p {
     font-feature-settings: "kern" 1;
  /* 5 */
@@ -32,13 +48,9 @@ p {
  /* 6 */
 }
 
-.signlog{
-	/*display: none;*/
-}
-
 .fullwidth,
 body#bp-default #wp-admin-bar .padder {
-    width: 60% !important;
+    width: 100% !important;
     max-width: 10000px !important;
     min-width: 960px;
     margin: 0 auto;
@@ -98,7 +110,7 @@ h2 {
 }
 
 .form-control:focus::-webkit-input-placeholder {
-    -webkit-transition: none;
+    -webkit-transition: none
     -moz-transition: none;
     transition: none;
 }
@@ -119,7 +131,7 @@ h2 {
 
 .toplam {
     width: 200%;
-    height: 80%;
+    height: 100%;
     position: relative;
     left: 0;
     left: -100%;
@@ -289,8 +301,8 @@ form#girisyap .girisbtn:hover {
 }
 
 #fback {
-    width: 60%;
-    height: 60%;
+    width: 100%;
+    height: 100%;
     position: absolute;
     z-index: -9999;
 }
@@ -299,7 +311,7 @@ form#girisyap .girisbtn:hover {
     position: absolute;
     right: 0;
     width: 50%;
-    height: 60%;
+    height: 100%;
     background: #03A9F4 url(http://ertekinn.com/loginsignup/signup.jpg);
     background-size: cover;
     background-position: 50% 50%;
@@ -309,12 +321,11 @@ form#girisyap .girisbtn:hover {
     position: absolute;
     left: 0;
     width: 50%;
-    height: 50%;
+    height: 100%;
     background: #03A9F4 url(http://ertekinn.com/loginsignup/login.png);
     background-size: cover;
     background-position: 50% 50%;
 }
-
 
 /*SUBJECTS*/
 
@@ -666,4 +677,3 @@ h2 {
 .fa-check{
  padding-top: 10px;
 }
-
