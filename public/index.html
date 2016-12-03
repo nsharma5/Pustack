@@ -3,42 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>MP3 Starter</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>PuStack</title>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="./css/styles.css">
-</head>
-
-<body ng-app="mp3">
-
-    <!-- <div ng-view></div> -->
-
-    <!-- DELETE following div and UNCOMMENT the previous one -->
-    <div class="row text-center">
-        <h1>Welcome to MP3!</h1>
-        <img src="http://lorempixel.com/400/200/cats"/>
-        <p> The installation and setup worked out for you. That is commendable.
-            To reward you for your efforts, here is a picture of a cat. However,
-            this is not the page you want. To get started on using your partials,
-            delete this particular div and, instead, uncomment the div given
-            in your index.html and implement your Angular routes in source_js/app.js .
-        </p>
-    </div>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
 
     <!-- Angular Scripts -->
     <!-- NOTE: removing the ".min." can help debugging in the console-->
-    <script src="./lib/angular/angular.min.js"></script>
-    <script src="./lib/angular-route/angular-route.min.js"></script>
+    <script src="./lib/angular/angular.js"></script>
+    <script src="./lib/angular-route/angular-route.js"></script>
     <script src="./js/app.js"></script>
     <script src="./js/controllers.js"></script>
+    <script src="./js/services.js"></script>
+</head>
+<body>
 
-    <!-- Scripts -->
+<!--NAVBAR-->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+    <a class="navbar-brand" href="#">PuStack</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Sign In</a></li>
+        <li><a href="#">Sign Up</a></li> 
+        <li><a href="#">Contact Us</a></li> 
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!--FORM-->
+<div class = "signlog">
+<div id="fback"><div class="girisback"></div>
+<div class="kayitback"></div></div>
+
+<div id="textbox">
+  <div class="toplam">
+
+    <div class="left">
+      <div id="ic">
+        <h2>Sign Up</h2>
+        <p>---</p>
+        <form id="girisyap" name="signup_form" id="signup_form" method="post" enctype="multipart/form-data" onsubmit="return false;">
+
+          <div class="yarim form-group">
+            <label class="control-label" for="inputNormal">Username</label>
+            <input type="text" name="signup_username" id="signup_username" class="bp-suggestions form-control" cols="50" rows="10" ></input>
+          </div>
+        <div class="yarim sn form-group">
+          <label class="control-label" for="inputNormal">Full Name</label>
+          <input type="text" name="field_1" id="field_1" value="" class="bp-suggestions form-control" cols="50" rows="10"></input>
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="inputNormal">Email</label>
+        <input type="text" name="signup_email" id="signup_email" class="bp-suggestions form-control" cols="50" rows="10"></input>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="inputNormal">Password</label>
+      <input type="password" name="signup_password" id="signup_password" value="" class="bp-suggestions form-control" cols="50" rows="10" ></input>
+  </div>
+  <div class="form-group soninpt">
+    <label class="control-label" for="inputNormal">About</label>
+    <input type="text" name="field_2" id="field_2" class="bp-suggestions form-control" cols="50" rows="10"></input>
+</div>
+<input type="submit" name="signup_submit" id="signup_submit" value="Sign Up" class="girisbtn"  />
+</form>
+
+<button id="moveright">Login</button>
+</div>
+</div>
+
+<div class="right">
+  <div id="ic">
+    <h2>Login</h2>
+    <p>Synth polaroid bitters chillwave pickled. Vegan disrupt tousled.</p>
+    <form name="login-form" id="girisyap" id="sidebar-user-login" method="post" onsubmit="return false;">
+
+      <div class="form-group">
+        <label class="control-label" for="inputNormal">Username</label>
+        <input type="text" name="log" class="bp-suggestions form-control" cols="50" rows="10" ></input>
+      </div>
+    <div class="form-group soninpt">
+      <label class="control-label" for="inputNormal">Password</label>
+      <input type="password" name="pwd" class="bp-suggestions form-control" cols="50" rows="10"></input>
+  </div>
+  <input type="submit" value="Login" class="girisbtn" tabindex="100" />
+  </form>
+
+<button id="moveleft">Sign Up</button>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+
+
+
+
+
+ <!-- Scripts -->
     <script src="./lib/jquery/dist/jquery.min.js"></script>
     <script src="./lib/foundation-sites/dist/foundation.min.js"></script>
     <script src="./js/script.js"></script>
-    <script>
-    $(document).foundation();
-    </script>
-    <script src="http://localhost:35729/livereload.js"></script>
+    <script type="text/javascript">
+    $('.form-control').on('focus blur', function (e) {
+    $(this).parents('.form-group').toggleClass('focused', (e.type === 'focus' || this.value.length > 0));
+}).trigger('blur');
+
+$('#moveleft').click(function() {
+  $('#textbox').animate({
+    'marginLeft': "0" //moves left
+  });
+
+  $('.toplam').animate({
+    'marginLeft': "100%" //moves right
+  });
+});
+
+$('#moveright').click(function() {
+  $('#textbox').animate({
+    'marginLeft': "50%" //moves right
+  });
+
+  $('.toplam').animate({
+    'marginLeft': "0" //moves right
+  });
+});</script>
 </body>
 </html>
