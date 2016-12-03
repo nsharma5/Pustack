@@ -1,68 +1,72 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <title>PuStack</title>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<title>PuStack</title>
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+	<!-- Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="./css/styles.css">
 
-    <!-- Angular Scripts -->
-    <!-- NOTE: removing the ".min." can help debugging in the console-->
-    <script src="./lib/angular/angular.js"></script>
-    <script src="./lib/angular-route/angular-route.js"></script>
-    <script src="./js/app.js"></script>
-    <script src="./js/controllers.js"></script>
-    <script src="./js/services.js"></script>
+	<!-- Angular Scripts -->
+	<!-- NOTE: removing the ".min." can help debugging in the console-->
+	<script src="./lib/angular/angular.js"></script>
+	<script src="./lib/angular-route/angular-route.js"></script>
+	<script src="./js/app.js"></script>
+	<script src="./js/controllers.js"></script>
+	<script src="./js/services.js"></script>
 </head>
+
 <body ng-app = "pustack">
 
-<div ng-view></div>
+	<div ng-view></div>
 
-  <div id="footer">
-    <div class="container">
-      <p class="footer-block">Place sticky footer content here.</p>
-    </div>
-  </div>
+  	<div id="footer">
+		<div class="container">
+	  		<p class="footer-block">Place sticky footer content here.</p>
+		</div>
+  	</div>
 
 
 
- <!-- Scripts -->
-    <script src="./lib/jquery/dist/jquery.js"></script>
-    <script src="./lib/foundation-sites/dist/foundation.js"></script>
-    <script src="./js/script.js"></script>
-    <script type="text/javascript">
-    $('.form-control').on('focus blur', function (e) {
-    $(this).parents('.form-group').toggleClass('focused', (e.type === 'focus' || this.value.length > 0));
-}).trigger('blur');
+ 	<!-- Scripts -->
+	<script src="./lib/jquery/dist/jquery.js"></script>
+	<script src="./lib/foundation-sites/dist/foundation.js"></script>
+	<script src="./js/script.js"></script>
+	<script type="text/javascript">
+		$('.form-control').on('focus blur', function (e) {
+			$(this).parents('.form-group').toggleClass('focused', (e.type === 'focus' || this.value.length > 0));
+		}).trigger('blur');
 
-$('#moveleft').click(function() {
-  $('#textbox').animate({
-    'marginLeft': "0" //moves left
-  });
+		$('#moveleft').click(function() {
+  			$('#textbox').animate({
+				'marginLeft': "0" //moves left
+  			});
 
-  $('.toplam').animate({
-    'marginLeft': "100%" //moves right
-  });
-});
+  			$('.toplam').animate({
+				'marginLeft': "100%" //moves right
+  			});
+		});
 
-$('#moveright').click(function() {
-  $('#textbox').animate({
-    'marginLeft': "50%" //moves right
-  });
+		$('#moveright').click(function() {
+  			$('#textbox').animate({
+				'marginLeft': "50%" //moves right
+  			});
 
-  $('.toplam').animate({
-    'marginLeft': "0" //moves right
-  });
-});</script>
+  			$('.toplam').animate({
+				'marginLeft': "0" //moves right
+  			});
+		});
+	</script>
 </body>
 </html>
