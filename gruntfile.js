@@ -16,6 +16,7 @@ module.exports = function(grunt) {
           'public/js/script.js': ['source_js/script.js'],
           'public/js/app.js': ['source_js/app.js'],
           'public/js/controllers.js': ['source_js/controllers.js'],
+          'public/js/services.js': ['source_js/services.js'],
         } //files
       } //my_target
     }, //uglify
@@ -35,6 +36,12 @@ module.exports = function(grunt) {
           config: 'compass_config.rb'
         } //options
       }, //dev
+      foundation: {
+        options: {
+          config: 'compass_foundation_config.rb'
+        } //options
+      } //foundation
+
     }, //compass
     watch: {
       options: { livereload: true },
@@ -44,9 +51,13 @@ module.exports = function(grunt) {
         //tasks: ['copy']
       }, //script
       sass: {
-        files: ['source_sass/*.scss', 'source_sass/foundation/*.scss'],
-        tasks: ['compass:dev',]
+        files: ['source_sass/*.scss'],
+        tasks: ['compass:dev','compass:foundation']
       }, //sass
+      sass_foundation: {
+        files: ['source_sass/*.scss', 'source_sass/foundation/*.scss'],
+        tasks: ['compass:dev']
+      }, //sass_foundation
       html: {
         files: ['public/*.html']
       }
