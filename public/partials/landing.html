@@ -1,4 +1,4 @@
-<div ng-controller = "landingController">
+<div class="landing" ng-controller = "landingController">
 
   <!--NAVBAR-->
   <nav class="navbar navbar-default">
@@ -14,87 +14,134 @@
     
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#lectures">Sign In/Up</a></li>
-          <li><a href="#">Contact Us</a></li> 
+          <li>
+            <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+            Sign In/Up</button>
+          </li> 
         </ul>
       </div>
     </div>
   </nav>
 
-  <!--FORM-->
-  <div class="signlog">
-    <div id="fback">
-      <div class="girisback"></div>
-      <div class="kayitback"></div>
-    </div>
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <!--FORM-->
+          <div class="signlog">
+            <div id="fback">
+              <div class="girisback"></div>
+              <div class="kayitback"></div>
+            </div>
 
-    <div id="textbox">
-      <div class="toplam">
-        <div class="left">
-          <div id="ic">
-            <h2>Sign Up</h2>
-            <p>---</p>
+            <button type="button" class="close" data-dismiss="modal">
+              <span aria-hidden="true">&times;</span>
+              <span class="sr-only">Close</span>
+            </button>
+
+            <div id="textbox">
+              <div class="toplam">
+                <div class="left">
+                  <div id="ic">
+                    <h2>Sign Up</h2>
+                    
+                    <form id="girisyap" name="signup_form" id="signup_form" method="post" enctype="multipart/form-data" onsubmit="return false;">
+
+                      <div class="form-group">
+                        <label class="control-label" for="inputNormal">Name</label>
+                        <input type="text" name="signup_username" id="signup_username" class="bp-suggestions form-control" cols="50" rows="10" ></input>
+                      </div>
+                
+                      <div class="form-group">
+                        <label class="control-label" for="inputNormal">Email</label>
+                        <input type="text" name="signup_email" id="signup_email" class="bp-suggestions form-control" cols="50" rows="10"></input>
+                      </div>
+              
+                      <div class="form-group">
+                        <label class="control-label" for="inputNormal">Password</label>
+                        <input type="password" name="signup_password" id="signup_password" value="" class="bp-suggestions form-control" cols="50" rows="10" ></input>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label" for="inputNormal">Standard</label>
+                        <div class="stand"> 
+                          <select name="Standard">
+                            <option value="9">9th</option>
+                            <option value="10">10th</option>
+                            <option value="11">11th</option>
+                            <option value="12">12th</option>
+                          </select>
+                        </div> 
+                      </div>
             
-            <form id="girisyap" name="signup_form" id="signup_form" method="post" enctype="multipart/form-data" onsubmit="return false;">
-
-              <div class="yarim form-group">
-                <label class="control-label" for="inputNormal">Username</label>
-                <input type="text" name="signup_username" id="signup_username" class="bp-suggestions form-control" cols="50" rows="10" ></input>
-              </div>
+                      <div class="form-group">
+                        <label class="control-label" for="inputNormal">School</label>
+                        <input type="text" name="signup_school" id="signup_school" class="bp-suggestions form-control" cols="50" rows="10"></input>
+                      </div>
           
-              <div class="yarim sn form-group">
-                <label class="control-label" for="inputNormal">Full Name</label>
-                <input type="text" name="field_1" id="field_1" value="" class="bp-suggestions form-control" cols="50" rows="10"></input>
-              </div>
-        
-              <div class="form-group">
-                <label class="control-label" for="inputNormal">Email</label>
-                <input type="text" name="signup_email" id="signup_email" class="bp-suggestions form-control" cols="50" rows="10"></input>
-              </div>
-      
-              <div class="form-group">
-                <label class="control-label" for="inputNormal">Password</label>
-                <input type="password" name="signup_password" id="signup_password" value="" class="bp-suggestions form-control" cols="50" rows="10" ></input>
-              </div>
-    
-              <div class="form-group soninpt">
-                <label class="control-label" for="inputNormal">About</label>
-                <input type="text" name="field_2" id="field_2" class="bp-suggestions form-control" cols="50" rows="10"></input>
-              </div>
-  
-              <input type="submit" name="signup_submit" id="signup_submit" value="Sign Up" class="girisbtn"  />
-            </form>
+                      <input type="submit" name="signup_submit" id="signup_submit" value="Sign Up" class="girisbtn"  />
+                    </form>
 
-            <button id="moveright">Login</button>
+                    <button id="moveright">Login</button>
+                  </div>
+                </div>
+
+                <div class="right">
+                  <div id="ic">
+                    <h2>Login</h2>
+                    
+                    <form name="login-form" id="girisyap" id="sidebar-user-login" method="post" onsubmit="return false;">
+
+                      <div class="form-group">
+                        <label class="control-label" for="inputNormal">Username</label>
+                        <input type="text" name="log" class="bp-suggestions form-control" cols="50" rows="10" ></input>
+                      </div>
+                      
+                      <div class="form-group soninpt">
+                        <label class="control-label" for="inputNormal">Password</label>
+                        <input type="password" name="pwd" class="bp-suggestions form-control" cols="50" rows="10"></input>
+                      </div>
+                      
+                      <input type="submit" value="Login" class="girisbtn" tabindex="100" />
+                    </form>
+
+                    <button id="moveleft">Sign Up</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="right">
-          <div id="ic">
-            <h2>Login</h2>
-            <p>Synth polaroid bitters chillwave pickled. Vegan disrupt tousled.</p>
-            
-            <form name="login-form" id="girisyap" id="sidebar-user-login" method="post" onsubmit="return false;">
-
-              <div class="form-group">
-                <label class="control-label" for="inputNormal">Username</label>
-                <input type="text" name="log" class="bp-suggestions form-control" cols="50" rows="10" ></input>
-              </div>
-              
-              <div class="form-group soninpt">
-                <label class="control-label" for="inputNormal">Password</label>
-                <input type="password" name="pwd" class="bp-suggestions form-control" cols="50" rows="10"></input>
-              </div>
-              
-              <input type="submit" value="Login" class="girisbtn" tabindex="100" />
-            </form>
-
-            <button id="moveleft">Sign Up</button>
-          </div>
-        </div>
-
       </div>
     </div>
   </div>
+
+  <script type="text/javascript">
+    $('.form-control').on('focus blur', function (e) {
+      $(this).parents('.form-group').toggleClass('focused', (e.type === 'focus' || this.value.length > 0));
+    }).trigger('blur');
+
+    $('#moveleft').click(function() {
+      $('#textbox').animate({
+        'marginLeft': "0" //moves left
+      });
+
+      $('.toplam').animate({
+        'marginLeft': "100%" //moves right
+      });
+    });
+
+    $('#moveright').click(function() {
+      $('#textbox').animate({
+        'marginLeft': "50%" //moves right
+      });
+
+      $('.toplam').animate({
+        'marginLeft': "0" //moves right
+      });
+    });
+  </script>
 </div>
 
