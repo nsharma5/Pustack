@@ -1,116 +1,607 @@
 <div ng-controller = "subjectController">
 	
-	<div class="area"></div>
-		<nav class="main-menu">
-			<ul>
+    <h2 class = "coursehead"> Subjects </h2>
 
-				<li>
-					<a href="#">
-						<i class="fa fa-home fa-2x"></i>
-						<span class="nav-text">Subjects</span>
-					</a>      
-				</li>
+	<nav class="main-menu">
+		<ul>
+			<li>
+				<a href="#">
+                    <i class="fa fa-home fa-2x"></i>
+                    <span class="nav-text">Subjects</span>
+				</a>      
+			</li>
 
-				<li class="has-subnav">
-					<a href="#">
-						<i class="fa fa-laptop fa-2x"></i>
-						<span class="nav-text">My Courses</span>
-					</a>       
-				</li>
+			<li class="has-subnav">
+				<a href="#">
+					<i class="fa fa-laptop fa-2x"></i>
+					<span class="nav-text">My Courses</span>
+				</a>       
+			</li>
 
-				<li class="has-subnav">
-					<a href="#">
-						<i class="fa fa-list fa-2x"></i>
-						<span class="nav-text">User</span>
-					</a>
-				</li>
-						
-			</ul>
-		</nav>
-	
-<!--Carousel Wrapper-->
-<!--Carousel Wrapper-->
-<div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
-    <!--Indicators-->
-    <ol class="carousel-indicators">
-        <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-2" data-slide-to="1"></li>
-        <li data-target="#carousel-example-2" data-slide-to="2"></li>
-    </ol>
-    <!--/.Indicators-->
+			<li class="has-subnav">
+				<a href="#">
+					<i class="fa fa-list fa-2x"></i>
+					<span class="nav-text">User</span>
+				</a>
+			</li>		
+		</ul>
+	</nav>
 
-    <!--Slides-->
-    <div class="carousel-inner" role="listbox">
-        <!--First slide-->
-        <div class="carousel-item active">
-            <!--Mask color-->
-            <div class="view hm-black-light">
-                <img src="http://mdbootstrap.com/images/slides/slide%20(11).jpg" class="img-fluid" alt="">
-                <div class="full-bg-img">
-                </div>
-            </div>
-            <!--Caption-->
-            <div class="carousel-caption">
-                <div class="animated fadeInDown">
-                    <h3 class="h3-responsive">Light mask</h3>
-                    <p>Secondary text</p>
-                </div>
-            </div>
-            <!--Caption-->
-        </div>
-        <!--/First slide-->
-
-        <!--Second slide-->
-        <div class="carousel-item">
-            <!--Mask color-->
-            <div class="view hm-black-strong">
-                <img src="http://mdbootstrap.com/images/slides/slide%20(15).jpg" class="img-fluid" alt="">
-                <div class="full-bg-img">
-                </div>
-            </div>
-            <!--Caption-->
-            <div class="carousel-caption">
-                <div class="animated fadeInDown">
-                    <h3 class="h3-responsive">Strong mask</h3>
-                    <p>Secondary text</p>
-                </div>
-            </div>
-            <!--Caption-->
-        </div>
-        <!--/Second slide-->
-
-        <!--Third slide-->
-        <div class="carousel-item">
-            <!--Mask color-->
-            <div class="view hm-black-slight">
-                <img src="http://mdbootstrap.com/images/slides/slide%20(13).jpg" class="img-fluid" alt="">
-                <div class="full-bg-img">
-                </div>
-            </div>
-            <!--Caption-->
-            <div class="carousel-caption">
-                <div class="animated fadeInDown">
-                    <h3 class="h3-responsive">Super light mask</h3>
-                    <p>Secondary text</p>
-                </div>
-            </div>
-            <!--Caption-->
-        </div>
-        <!--/Third slide-->
+    <div class="coursecat">
+        <h4>9th Standard</h4>
     </div>
-    <!--/.Slides-->
-
-    <!--Controls-->
-    <a class="left carousel-control" href="#carousel-example-2" role="button" data-slide="prev">
-        <span class="icon-prev" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#carousel-example-2" role="button" data-slide="next">
-        <span class="icon-next" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-    <!--/.Controls-->
-</div>
-<!--/.Carousel Wrapper-->
 	
+    <div class="carousel">
+
+        <div class="wrapper">
+            <div class="card radius shadowDepth1">
+
+                <div class="card__image border-tlr-radius">
+                    <img src="http://lorempixel.com/400/200/sports/" alt="image" class="border-tlr-radius">
+                </div>
+
+                <div class="card__content card__padding">
+
+                    <div class="card__share">
+                        <a id="share" class=" share-icon" href="#"><i class="fa fa-check" aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="card__meta">
+                        <a href="#">Web Design</a>
+                        <time>17th March</time>
+                    </div>
+
+                    <article class="card__article">
+                        <h2><a href="#videos">Material Design Card - For Blog Post Article</a></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="card radius shadowDepth1">
+
+                <div class="card__image border-tlr-radius">
+                    <img src="http://lorempixel.com/400/200/sports/" alt="image" class="border-tlr-radius">
+                </div>
+
+                <div class="card__content card__padding">
+
+                    <div class="card__share">
+                        <a id="share" class=" share-icon" href="#"><i class="fa fa-check" aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="card__meta">
+                        <a href="#">Web Design</a>
+                        <time>17th March</time>
+                    </div>
+
+                    <article class="card__article">
+                        <h2><a href="#videos">Material Design Card - For Blog Post Article</a></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="card radius shadowDepth1">
+
+                <div class="card__image border-tlr-radius">
+                    <img src="http://lorempixel.com/400/200/sports/" alt="image" class="border-tlr-radius">
+                </div>
+
+                <div class="card__content card__padding">
+
+                    <div class="card__share">
+                        <a id="share" class=" share-icon" href="#"><i class="fa fa-check" aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="card__meta">
+                        <a href="#">Web Design</a>
+                        <time>17th March</time>
+                    </div>
+
+                    <article class="card__article">
+                        <h2><a href="#videos">Material Design Card - For Blog Post Article</a></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="card radius shadowDepth1">
+
+                <div class="card__image border-tlr-radius">
+                    <img src="http://lorempixel.com/400/200/sports/" alt="image" class="border-tlr-radius">
+                </div>
+
+                <div class="card__content card__padding">
+
+                    <div class="card__share">
+                        <a id="share" class=" share-icon" href="#"><i class="fa fa-check" aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="card__meta">
+                        <a href="#">Web Design</a>
+                        <time>17th March</time>
+                    </div>
+
+                    <article class="card__article">
+                        <h2><a href="#videos">Material Design Card - For Blog Post Article</a></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="card radius shadowDepth1">
+
+                <div class="card__image border-tlr-radius">
+                    <img src="http://lorempixel.com/400/200/sports/" alt="image" class="border-tlr-radius">
+                </div>
+
+                <div class="card__content card__padding">
+
+                    <div class="card__share">
+                        <a id="share" class=" share-icon" href="#"><i class="fa fa-check" aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="card__meta">
+                        <a href="#">Web Design</a>
+                        <time>17th March</time>
+                    </div>
+
+                    <article class="card__article">
+                        <h2><a href="#videos">Material Design Card - For Blog Post Article</a></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="coursecat">
+        <h4>10th Standard</h4>
+    </div>
+    
+    <div class="carousel">
+
+        <div class="wrapper">
+            <div class="card radius shadowDepth1">
+
+                <div class="card__image border-tlr-radius">
+                    <img src="http://lorempixel.com/400/200/sports/" alt="image" class="border-tlr-radius">
+                </div>
+
+                <div class="card__content card__padding">
+
+                    <div class="card__share">
+                        <a id="share" class=" share-icon" href="#"><i class="fa fa-check" aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="card__meta">
+                        <a href="#">Web Design</a>
+                        <time>17th March</time>
+                    </div>
+
+                    <article class="card__article">
+                        <h2><a href="#videos">Material Design Card - For Blog Post Article</a></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="card radius shadowDepth1">
+
+                <div class="card__image border-tlr-radius">
+                    <img src="http://lorempixel.com/400/200/sports/" alt="image" class="border-tlr-radius">
+                </div>
+
+                <div class="card__content card__padding">
+
+                    <div class="card__share">
+                        <a id="share" class=" share-icon" href="#"><i class="fa fa-check" aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="card__meta">
+                        <a href="#">Web Design</a>
+                        <time>17th March</time>
+                    </div>
+
+                    <article class="card__article">
+                        <h2><a href="#videos">Material Design Card - For Blog Post Article</a></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="card radius shadowDepth1">
+
+                <div class="card__image border-tlr-radius">
+                    <img src="http://lorempixel.com/400/200/sports/" alt="image" class="border-tlr-radius">
+                </div>
+
+                <div class="card__content card__padding">
+
+                    <div class="card__share">
+                        <a id="share" class=" share-icon" href="#"><i class="fa fa-check" aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="card__meta">
+                        <a href="#">Web Design</a>
+                        <time>17th March</time>
+                    </div>
+
+                    <article class="card__article">
+                        <h2><a href="#videos">Material Design Card - For Blog Post Article</a></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="card radius shadowDepth1">
+
+                <div class="card__image border-tlr-radius">
+                    <img src="http://lorempixel.com/400/200/sports/" alt="image" class="border-tlr-radius">
+                </div>
+
+                <div class="card__content card__padding">
+
+                    <div class="card__share">
+                        <a id="share" class=" share-icon" href="#"><i class="fa fa-check" aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="card__meta">
+                        <a href="#">Web Design</a>
+                        <time>17th March</time>
+                    </div>
+
+                    <article class="card__article">
+                        <h2><a href="#videos">Material Design Card - For Blog Post Article</a></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="card radius shadowDepth1">
+
+                <div class="card__image border-tlr-radius">
+                    <img src="http://lorempixel.com/400/200/sports/" alt="image" class="border-tlr-radius">
+                </div>
+
+                <div class="card__content card__padding">
+
+                    <div class="card__share">
+                        <a id="share" class=" share-icon" href="#"><i class="fa fa-check" aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="card__meta">
+                        <a href="#">Web Design</a>
+                        <time>17th March</time>
+                    </div>
+
+                    <article class="card__article">
+                        <h2><a href="#videos">Material Design Card - For Blog Post Article</a></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="coursecat">
+        <h4>11th Standard</h4>
+    </div>
+    
+    <div class="carousel">
+
+        <div class="wrapper">
+            <div class="card radius shadowDepth1">
+
+                <div class="card__image border-tlr-radius">
+                    <img src="http://lorempixel.com/400/200/sports/" alt="image" class="border-tlr-radius">
+                </div>
+
+                <div class="card__content card__padding">
+
+                    <div class="card__share">
+                        <a id="share" class=" share-icon" href="#"><i class="fa fa-check" aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="card__meta">
+                        <a href="#">Web Design</a>
+                        <time>17th March</time>
+                    </div>
+
+                    <article class="card__article">
+                        <h2><a href="#videos">Material Design Card - For Blog Post Article</a></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="card radius shadowDepth1">
+
+                <div class="card__image border-tlr-radius">
+                    <img src="http://lorempixel.com/400/200/sports/" alt="image" class="border-tlr-radius">
+                </div>
+
+                <div class="card__content card__padding">
+
+                    <div class="card__share">
+                        <a id="share" class=" share-icon" href="#"><i class="fa fa-check" aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="card__meta">
+                        <a href="#">Web Design</a>
+                        <time>17th March</time>
+                    </div>
+
+                    <article class="card__article">
+                        <h2><a href="#videos">Material Design Card - For Blog Post Article</a></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="card radius shadowDepth1">
+
+                <div class="card__image border-tlr-radius">
+                    <img src="http://lorempixel.com/400/200/sports/" alt="image" class="border-tlr-radius">
+                </div>
+
+                <div class="card__content card__padding">
+
+                    <div class="card__share">
+                        <a id="share" class=" share-icon" href="#"><i class="fa fa-check" aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="card__meta">
+                        <a href="#">Web Design</a>
+                        <time>17th March</time>
+                    </div>
+
+                    <article class="card__article">
+                        <h2><a href="#videos">Material Design Card - For Blog Post Article</a></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="card radius shadowDepth1">
+
+                <div class="card__image border-tlr-radius">
+                    <img src="http://lorempixel.com/400/200/sports/" alt="image" class="border-tlr-radius">
+                </div>
+
+                <div class="card__content card__padding">
+
+                    <div class="card__share">
+                        <a id="share" class=" share-icon" href="#"><i class="fa fa-check" aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="card__meta">
+                        <a href="#">Web Design</a>
+                        <time>17th March</time>
+                    </div>
+
+                    <article class="card__article">
+                        <h2><a href="#videos">Material Design Card - For Blog Post Article</a></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="card radius shadowDepth1">
+
+                <div class="card__image border-tlr-radius">
+                    <img src="http://lorempixel.com/400/200/sports/" alt="image" class="border-tlr-radius">
+                </div>
+
+                <div class="card__content card__padding">
+
+                    <div class="card__share">
+                        <a id="share" class=" share-icon" href="#"><i class="fa fa-check" aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="card__meta">
+                        <a href="#">Web Design</a>
+                        <time>17th March</time>
+                    </div>
+
+                    <article class="card__article">
+                        <h2><a href="#videos">Material Design Card - For Blog Post Article</a></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="coursecat">
+        <h4>12th Standard</h4>
+    </div>
+    
+    <div class="carousel">
+
+        <div class="wrapper">
+            <div class="card radius shadowDepth1">
+
+                <div class="card__image border-tlr-radius">
+                    <img src="http://lorempixel.com/400/200/sports/" alt="image" class="border-tlr-radius">
+                </div>
+
+                <div class="card__content card__padding">
+
+                    <div class="card__share">
+                        <a id="share" class=" share-icon" href="#"><i class="fa fa-check" aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="card__meta">
+                        <a href="#">Web Design</a>
+                        <time>17th March</time>
+                    </div>
+
+                    <article class="card__article">
+                        <h2><a href="#videos">Material Design Card - For Blog Post Article</a></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="card radius shadowDepth1">
+
+                <div class="card__image border-tlr-radius">
+                    <img src="http://lorempixel.com/400/200/sports/" alt="image" class="border-tlr-radius">
+                </div>
+
+                <div class="card__content card__padding">
+
+                    <div class="card__share">
+                        <a id="share" class=" share-icon" href="#"><i class="fa fa-check" aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="card__meta">
+                        <a href="#">Web Design</a>
+                        <time>17th March</time>
+                    </div>
+
+                    <article class="card__article">
+                        <h2><a href="#videos">Material Design Card - For Blog Post Article</a></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="card radius shadowDepth1">
+
+                <div class="card__image border-tlr-radius">
+                    <img src="http://lorempixel.com/400/200/sports/" alt="image" class="border-tlr-radius">
+                </div>
+
+                <div class="card__content card__padding">
+
+                    <div class="card__share">
+                        <a id="share" class=" share-icon" href="#"><i class="fa fa-check" aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="card__meta">
+                        <a href="#">Web Design</a>
+                        <time>17th March</time>
+                    </div>
+
+                    <article class="card__article">
+                        <h2><a href="#videos">Material Design Card - For Blog Post Article</a></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="card radius shadowDepth1">
+
+                <div class="card__image border-tlr-radius">
+                    <img src="http://lorempixel.com/400/200/sports/" alt="image" class="border-tlr-radius">
+                </div>
+
+                <div class="card__content card__padding">
+
+                    <div class="card__share">
+                        <a id="share" class=" share-icon" href="#"><i class="fa fa-check" aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="card__meta">
+                        <a href="#">Web Design</a>
+                        <time>17th March</time>
+                    </div>
+
+                    <article class="card__article">
+                        <h2><a href="#videos">Material Design Card - For Blog Post Article</a></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="card radius shadowDepth1">
+
+                <div class="card__image border-tlr-radius">
+                    <img src="http://lorempixel.com/400/200/sports/" alt="image" class="border-tlr-radius">
+                </div>
+
+                <div class="card__content card__padding">
+
+                    <div class="card__share">
+                        <a id="share" class=" share-icon" href="#"><i class="fa fa-check" aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="card__meta">
+                        <a href="#">Web Design</a>
+                        <time>17th March</time>
+                    </div>
+
+                    <article class="card__article">
+                        <h2><a href="#videos">Material Design Card - For Blog Post Article</a></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <script type="text/javascript" src="./lib/slick-carousel/slick/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.carousel').slick({
+                slidesToShow: 3,
+                arrow: true,
+                responsive: [{
+                    breakpoint: 850,
+                    settings: {
+                        arrows: true,
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 500,
+                    settings: {
+                        arrows: true,
+                        slidesToShow: 1
+                    }
+                }]
+            });
+        });
+    </script>
+
+
 </div>
