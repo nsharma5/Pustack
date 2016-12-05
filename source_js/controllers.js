@@ -1,8 +1,19 @@
 var pustackControllers = angular.module('pustackControllers',[]);
 
-pustackControllers.controller('landingController', ['$scope', '$window', function($scope, $window) {
+pustackControllers.controller('landingController', ['$scope', '$http', '$window' , 'UsersService' , function($scope, $http, $window, UsersService) {
+
+  $scope.users  = UsersService;
+
+  $scope.createUser = function () {
+    
+    $scope.users.createUser($scope.users.newUser)
+      .then(function () {
+        console.log("User Created");
+      })
+  };
 
 }]);
+
 
 pustackControllers.controller('subjectController', ['$scope', '$window', function($scope, $window) {
 	
