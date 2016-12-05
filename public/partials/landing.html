@@ -1,5 +1,5 @@
 <div class="landing" ng-controller = "landingController">
-
+<toaster-container ></toaster-container >
   <!--NAVBAR-->
   <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -45,7 +45,6 @@
                   <div id="ic">
                     <h2>Sign Up</h2>
                     <!-- Create User (toaster will pop up)-->
-                    <toaster-container ></toaster-container >
                     <form id="girisyap" name="signup_form" id="signup_form" method="post" ng-submit="createUser()" enctype="multipart/form-data" onsubmit="return false;">
 
                       <div class="form-group">
