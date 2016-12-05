@@ -513,8 +513,67 @@ li:nth-child(4) {
 		color: #2980b9;
 	}
 
+
+
+.coursediv{
+    border-bottom: 2px solid gray;
+}
+
+.coursehead{
+    color: black;
+    margin-left: 113px;
+    margin-top: 50px;
+    font-size: 40px;
+}
+
+.coursespan{
+    display: inline-block;
+    margin-left: 93px;
+    margin-top: 20px;
+}
+
+.coursespan span{
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.fa-star-o{
+ padding-top: 10px;
+}
+
+.fa-check{
+    @extend .fa-star-o;
+}
+
+
+/*******************************************/
+/***************VIDEOS********************/
+.holdvid {
+    position:relative;
+    padding-bottom:40%;
+    margin-top: 60px;
+    height:0;
+    overflow:hidden;
+    margin-left: 190px;
+}
+
+.holdvid iframe, .holdvid object, .holdvid embed {
+    position:absolute;
+    top:0;
+    left:0;
+    width:90%;
+    height:80%;
+}
+
+.vidbut{
+    margin-left: 515px;
+}
+
+
+/*******************************************/
+/***************CARDS********************/
 h2 {
-	line-height: 1.2;
+	line-height: 0.9;
 	margin-bottom: 1.6rem;
 }
 
@@ -558,6 +617,12 @@ h2 {
 	padding: 1.6rem;
     height: 250px;
 }
+
+@media (min-width: 544px) and (max-width: 767px) { 
+.card__padding {
+	padding: 1.6rem;
+    height: 220px;
+}}
  
 .card__image {
 	min-height: 100px;
@@ -575,10 +640,25 @@ h2 {
 
 /* card meta */
 .card__meta time {
-	font-size: 24px;
+	font-size: 21px;
 	color: #bbb;
 	margin-left: 0.8rem;
 }
+
+@media (min-width: 544px) and (max-width: 767px) { 
+.card__meta time {
+	font-size: 18px;
+	color: #bbb;
+	margin-left: 0.8rem;
+}}
+
+@media (min-width: 768px) and (max-width: 991px) { 
+ .card__meta time {
+	font-size: 18px;
+	color: #bbb;
+	margin-left: 0.8rem;
+}}
+
 
 /* card article */
 .card__article a {
@@ -592,6 +672,10 @@ h2 {
 		color: #2980b9;
 	}
 
+@media (min-width: 768px) and (max-width: 991px) { 
+.descrip{
+	display: none;
+}}
 /* card action */
 .card__action {
 	overflow: hidden;
@@ -677,57 +761,3 @@ h2 {
 	    transform: scale(1.2);
 	}
 
-
-.coursediv{
-    border-bottom: 2px solid gray;
-}
-
-.coursehead{
-    color: black;
-    margin-left: 113px;
-    margin-top: 50px;
-    font-size: 40px;
-}
-
-.coursespan{
-    display: inline-block;
-    margin-left: 93px;
-    margin-top: 20px;
-}
-
-.coursespan span{
-    padding-left: 20px;
-    font-size: 20px;
-}
-
-.fa-star-o{
- padding-top: 10px;
-}
-
-.fa-check{
-    @extend .fa-star-o;
-}
-
-
-/*******************************************/
-/***************VIDEOS********************/
-.holdvid {
-    position:relative;
-    padding-bottom:40%;
-    margin-top: 60px;
-    height:0;
-    overflow:hidden;
-    margin-left: 190px;
-}
-
-.holdvid iframe, .holdvid object, .holdvid embed {
-    position:absolute;
-    top:0;
-    left:0;
-    width:90%;
-    height:80%;
-}
-
-.vidbut{
-    margin-left: 515px;
-}
