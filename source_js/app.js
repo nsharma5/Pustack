@@ -9,5 +9,20 @@ app.config(function ($routeProvider) {
 		.when ('/lectures',{
 			templateUrl:'partials/lectures.html',
 			controller: 'lectureController'
+		})
+
+		.when ('/mycourses',{
+			templateUrl:'partials/mycourses.html',
+			controller: 'mycoursesController'
+		})
+
+		.when ('/subjects',{
+			templateUrl:'partials/subjects.html',
+			controller: 'subjectController'
+		})
+
+		.when('/videos', {
+			templateUrl: 'partials/videos.html',
+			controller: 'videosController'
 		});
 });

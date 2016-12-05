@@ -11,3 +11,11 @@ pustackControllers.controller('subjectController', ['$scope', '$window', functio
 pustackControllers.controller('lectureController', ['$scope', '$window', function($scope, $window) {
 	
 }]);
+
+pustackControllers.controller('mycoursesController', ['$scope', '$window', function($scope, $window) {
+	
+}]);
+
+pustackControllers.controller('subjectController', ['$scope', '$window', function($scope, $window) {
+	
+}]);

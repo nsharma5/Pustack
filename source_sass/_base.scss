@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Maitree:400,700');
 
-
 /*INDEX PAGE*/
 .navbar-inverse{
 	opacity: 0.9;
@@ -12,16 +11,24 @@
 	font-size: 20px;
 }
 
-.page__footer {
-    height: 120px;
-    padding: 20px;
-    text-align: center;
-    background: #232526;
-    border-style: solid;
-    border-color: white;
-    border-width: 5px;
+#footer {
+    bottom: 0;
+    width: 100%;
+    position: relative;
+    height: 70px;
+    background-color: #282A2B;
+ }
 
+
+.copy{
+    margin-left: 79px;
+    color: white;
 }
+
+.copy .fa{
+    padding-top: 23px;
+}
+
 
 /*LANDING*/
 body {
@@ -30,7 +37,6 @@ body {
     background: #F5F5F5;
     min-width: 960px;
     width: 100%;
-    font-family: Roboto;
     text-rendering: optimizeLegibility;
  /* 2 */
     -webkit-font-smoothing: antialiased;
@@ -110,7 +116,7 @@ h2 {
 }
 
 .form-control:focus::-webkit-input-placeholder {
-    -webkit-transition: none
+    -webkit-transition: none;
     -moz-transition: none;
     transition: none;
 }
@@ -327,7 +333,8 @@ form#girisyap .girisbtn:hover {
     background-position: 50% 50%;
 }
 
-/*SUBJECTS*/
+/*******************************************/
+/***************SUBJECTS********************/
 
 .fa {
 position: relative;
@@ -346,8 +353,8 @@ overflow:visible;
 }
 
 .main-menu {
-background:#636361;
-border-right:1px solid #e5e5e5;
+background-image: -webkit-gradient(radial, center center, 0, center center, 286, color-stop(0, #959595), color-stop(76, #4E4E4E), color-stop(87, #383838), color-stop(100, #1b1b1b));
+-webkit-box-shadow: 6px 3px 17px 1px rgba(0,0,0,0.75);
 position:absolute;
 top:0;
 bottom:0;
@@ -438,42 +445,55 @@ li:nth-child(3) {
   background-color: #053145;
 }
 
-
+li:nth-child(4) {
+  background-color: #282A2B;
+  margin-top: 240px;
+  height: 71px !important;
+}
+    
 
 /*******************************************/
 /***************LECTURES********************/
 
 .breadcrumb{
-    margin-top: 50px;
-    background-color: white;
+    margin-top: 30px;
     height: 75px;
+    border-bottom: 2px solid gray;
 }
 
 .breadcrumb li:nth-child(1){
     margin-left: 80px;
-    font-size: 26px;
+    font-size: 28px;
+    background-color: transparent !important;
+}
+
+.breadcrumb li:nth-child(2){
+    font-size: 32px;
+    background-color: transparent !important;
+}
+
+
+.breadcrumb .breadtrail{
+    color: black;
 }
 
 .breadcrumb li{
-    font-size: 22px;
-    background-color: white;
-}
-
-.breadtrail{
-    color: black;
+    margin-top: 13px;
 }
 
 .btn-success{
     float: right;
+    margin-right: 40px;
 }
 
 #lecturecont{
-    margin-top: 50px;
-    margin-left: 65px;
+    margin-top: 30px;
+    margin-left: 75px;
 }
 
 
-/*MYCOURSES*/
+/*******************************************/
+/***************MY COURSES********************/
 *,
 *:after,
 *:before {
@@ -484,8 +504,8 @@ li:nth-child(3) {
 
 
 #coursecont{
-    margin-top: 65px;
-    margin-left: 65px;
+    margin-top: 40px;
+    margin-left: 75px;
 }
 
 
@@ -657,15 +677,21 @@ h2 {
 	    transform: scale(1.2);
 	}
 
+
+.coursediv{
+    border-bottom: 2px solid gray;
+}
+
 .coursehead{
     color: black;
-    margin-left: 100px;
+    margin-left: 113px;
+    margin-top: 50px;
     font-size: 40px;
 }
 
 .coursespan{
     display: inline-block;
-    margin-left: 80px;
+    margin-left: 93px;
     margin-top: 20px;
 }
 
@@ -674,6 +700,34 @@ h2 {
     font-size: 20px;
 }
 
-.fa-check{
+.fa-star-o{
  padding-top: 10px;
+}
+
+.fa-check{
+    @extend .fa-star-o;
+}
+
+
+/*******************************************/
+/***************VIDEOS********************/
+.holdvid {
+    position:relative;
+    padding-bottom:40%;
+    margin-top: 60px;
+    height:0;
+    overflow:hidden;
+    margin-left: 190px;
+}
+
+.holdvid iframe, .holdvid object, .holdvid embed {
+    position:absolute;
+    top:0;
+    left:0;
+    width:90%;
+    height:80%;
+}
+
+.vidbut{
+    margin-left: 515px;
 }
