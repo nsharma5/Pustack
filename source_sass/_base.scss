@@ -52,6 +52,11 @@
     	hyphens: auto;
 	}
 
+	.sign {
+		color: #03A9F4 !important;
+		background-color: #F5F5F5 !important;
+	}
+
 	#myModal {
 		margin: 0 auto;
 		width: 90%;
@@ -72,8 +77,8 @@
 
 	.close {
 		z-index: 10000;
-		font-size: 2em;
-		color: black;
+		font-size: 30px !important;
+		color: black !important;
 	}
 
 	h2 {
@@ -361,10 +366,11 @@
 
 /*SUBJECTS*/
 .coursecat {
+	color: #2199E8;
 	width: 85%;
 	margin: 0 auto;
 	margin-left: 113px;
-	border-bottom: 1px solid gray;
+	border-bottom: 1px solid #00101E;
 
 }
 
@@ -380,11 +386,11 @@
 	}
 
 	.slick-prev::before {
-		color: black !important;
+		color: #00101E !important;
 		font-size: 30px;
 	}
 	.slick-next::before {
-		color: black !important;
+		color: #00101E !important;
 		font-size: 30px;
 		margin-left: -10px;
 	}
@@ -513,6 +519,7 @@ li:nth-child(4) {
     margin-top: 30px;
     height: 75px;
     border-bottom: 2px solid gray;
+    background-color: white !important;
 }
 
 .breadcrumb li:nth-child(1){
@@ -765,25 +772,36 @@ h2 {
 
 /*******************************************/
 /***************VIDEOS********************/
+#lecturemenu {
+	margin-left: 600px;
+	color: black;
+}
+
 .holdvid {
     position:relative;
-    padding-bottom:40%;
-    margin-top: 60px;
-    height:0;
+    width: 85%;
+    float: right;
+    margin-top: 1em;
     overflow:hidden;
-    margin-left: 190px;
+    padding: 20%;
 }
 
-.holdvid iframe, .holdvid object, .holdvid embed {
-    position:absolute;
+.divyam {
+    position: absolute;
     top:0;
     left:0;
-    width:90%;
-    height:80%;
+    width: 90%;
+    height: 100%;
 }
 
-.vidbut{
-    margin-left: 515px;
+.vibut {
+	width: 21%;
+	margin: 0 auto;
+	
+	.right {
+		float: right;
+	}
+	
 }
 
 /*******************************************/

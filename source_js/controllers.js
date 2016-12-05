@@ -19,3 +19,7 @@ pustackControllers.controller('mycoursesController', ['$scope', '$window', funct
 pustackControllers.controller('subjectController', ['$scope', '$window', function($scope, $window) {
 	
 }]);
+
+pustackControllers.controller('videosController', ['$scope', '$window', function($scope, $window) {
+	
+}]);
