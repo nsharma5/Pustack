@@ -11,8 +11,8 @@ pustackServices.factory('Users', function($http, $resource) {
 app.service('UsersService', function (Users, $q, toaster) {
     var self =  {
     				'newUser': null,
-                    'selectedUser': null,
-                    'UsersList': [],
+                    'userLoggingIn': null,
+                    'loggedUser': null,
                     'search': null,
                     'sort': {"name": 1},
                     'createUser': function (user) {
@@ -24,6 +24,25 @@ app.service('UsersService', function (Users, $q, toaster) {
                             d.resolve()
                         });
                         return d.promise;
+                    },
+                    'login': function (user){
+                    	console.log("login called", user);
+                    	var params = {
+                            'where': {"email": user.email, "password": user.password}
+                        };
+
+                        Users.get(params, function (data) {
+        					if (data["data"][0][0])
+        					{
+                            	self.loggedUser = data["data"][0][0];
+                            	console.log(self.loggedUser);
+
+                            }
+                            else
+                            {
+                            	console.log("Wrong Credentials");
+                            }
+                        });
                     }
 
                 };
