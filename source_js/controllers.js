@@ -12,6 +12,11 @@ pustackControllers.controller('landingController', ['$scope', '$http', '$window'
       })
   };
 
+  $scope.loginUser = function () {
+    $scope.users.login($scope.users.userLoggingIn);
+    //console.log("here", $scope.users.loggedUser);
+  };
+
 }]);
 
 
