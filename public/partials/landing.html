@@ -1,5 +1,5 @@
 <div class="landing" ng-controller = "landingController">
-
+<toaster-container ></toaster-container >
   <!--NAVBAR-->
   <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -44,28 +44,28 @@
                 <div class="left">
                   <div id="ic">
                     <h2>Sign Up</h2>
-                    
-                    <form id="girisyap" name="signup_form" id="signup_form" method="post" enctype="multipart/form-data" onsubmit="return false;">
+                    <!-- Create User (toaster will pop up)-->
+                    <form id="girisyap" name="signup_form" id="signup_form" method="post" ng-submit="createUser()" enctype="multipart/form-data" onsubmit="return false;">
 
                       <div class="form-group">
                         <label class="control-label" for="inputNormal">Name</label>
-                        <input type="text" name="signup_username" id="signup_username" class="bp-suggestions form-control" cols="50" rows="10" ></input>
+                        <input type="text" name="signup_username" id="signup_username" class="bp-suggestions form-control" cols="50" rows="10" ng-model="users.newUser.name"></input>
                       </div>
                 
                       <div class="form-group">
                         <label class="control-label" for="inputNormal">Email</label>
-                        <input type="text" name="signup_email" id="signup_email" class="bp-suggestions form-control" cols="50" rows="10"></input>
+                        <input type="text" name="signup_email" id="signup_email" class="bp-suggestions form-control" cols="50" rows="10" ng-model="users.newUser.email"></input>
                       </div>
               
                       <div class="form-group">
                         <label class="control-label" for="inputNormal">Password</label>
-                        <input type="password" name="signup_password" id="signup_password" value="" class="bp-suggestions form-control" cols="50" rows="10" ></input>
+                        <input type="password" name="signup_password" id="signup_password" value="" class="bp-suggestions form-control" cols="50" rows="10" ng-model="users.newUser.password"></input>
                       </div>
 
                       <div class="form-group">
                         <label class="control-label" for="inputNormal">Standard</label>
                         <div class="stand"> 
-                          <select name="Standard">
+                          <select name="Standard" ng-model="users.newUser.currentStandard">
                             <option value="9">9th</option>
                             <option value="10">10th</option>
                             <option value="11">11th</option>
@@ -76,7 +76,7 @@
             
                       <div class="form-group">
                         <label class="control-label" for="inputNormal">School</label>
-                        <input type="text" name="signup_school" id="signup_school" class="bp-suggestions form-control" cols="50" rows="10"></input>
+                        <input type="text" name="signup_school" id="signup_school" class="bp-suggestions form-control" cols="50" rows="10" ng-model="users.newUser.school"></input>
                       </div>
           
                       <input type="submit" name="signup_submit" id="signup_submit" value="Sign Up" class="girisbtn"  />
@@ -90,16 +90,16 @@
                   <div id="ic">
                     <h2>Login</h2>
                     
-                    <form name="login-form" id="girisyap" id="sidebar-user-login" method="post" onsubmit="return false;">
+                    <form name="login-form" id="girisyap" id="sidebar-user-login" method="post" ng-submit="loginUser()" onsubmit="return false;">
 
                       <div class="form-group">
-                        <label class="control-label" for="inputNormal">Username</label>
-                        <input type="text" name="log" class="bp-suggestions form-control" cols="50" rows="10" ></input>
+                        <label class="control-label" for="inputNormal">Email/Username</label>
+                        <input type="text" name="log" class="bp-suggestions form-control" cols="50" rows="10" ng-model="users.userLoggingIn.email"></input>
                       </div>
                       
                       <div class="form-group soninpt">
                         <label class="control-label" for="inputNormal">Password</label>
-                        <input type="password" name="pwd" class="bp-suggestions form-control" cols="50" rows="10"></input>
+                        <input type="password" name="pwd" class="bp-suggestions form-control" cols="50" rows="10" ng-model="users.userLoggingIn.password"></input>
                       </div>
                       
                       <input type="submit" value="Login" class="girisbtn" tabindex="100" />
