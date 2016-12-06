@@ -8,7 +8,7 @@ pustackServices.factory('Users', function($http, $resource) {
     });
 });
 
-app.service('UsersService', function (Users, $q, toaster) {
+app.service('UsersService', function (Users, $q, toaster, $location) {
     var self =  {
     				'newUser': null,
                     'userLoggingIn': null,
@@ -26,21 +26,23 @@ app.service('UsersService', function (Users, $q, toaster) {
                         return d.promise;
                     },
                     'login': function (user){
-                    	console.log("login called", user);
-                    	var params = {
+                        console.log("login called", user);
+                        var params = {
                             'where': {"email": user.email, "password": user.password}
                         };
 
                         Users.get(params, function (data) {
-        					if (data["data"][0][0])
-        					{
-                            	self.loggedUser = data["data"][0][0];
-                            	console.log(self.loggedUser);
+                            if (data["data"][0][0])
+                            {
+                                self.loggedUser = data["data"][0][0];
+                                console.log(self.loggedUser);
+                                $location.path('/subjects');
 
                             }
                             else
                             {
-                            	console.log("Wrong Credentials");
+                                self.loggedUser = null;
+                                console.log("Wrong Credentials");
                             }
                         });
                     }
@@ -64,7 +66,7 @@ app.service('SubjectsService', function (Subjects, $q, toaster) {
                     'getSubjects': function(){
                         self.subjectsList = [];
                         var params = {
-                            'where': {"courseStandard": 10}
+                            //'where': {"courseStandard": 10}
                         };
 
                         Subjects.get(params, function (data) {
