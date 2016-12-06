@@ -1,6 +1,6 @@
 var app = angular.module('pustack',['ngRoute', 'pustackControllers', 'pustackServices']);
 
-app.config(function ($routeProvider) {
+app.config(function ($routeProvider, $locationProvider) {
 	$routeProvider
 		.when ('/',{
 			templateUrl:'partials/landing.html',
