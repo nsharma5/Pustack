@@ -31,14 +31,9 @@ pustackControllers.controller('subjectController', ['$scope', '$http', '$window'
 
 }]);
 
-pustackControllers.controller('chapterController', ['$scope', '$http', '$window' , 'UsersService' , 'SubjectsService' , 'ChaptersService' , function($scope, $http, $window, UsersService, SubjectsService, ChaptersService) {
-
-  $scope.users    = UsersService;
-  $scope.subjects = SubjectsService;
-  $scope.chapters = ChaptersService;
-
+pustackControllers.controller('lectureController', ['$scope', '$window', function($scope, $window) {
+	
 }]);
-
 
 pustackControllers.controller('mycoursesController', ['$scope', '$window', function($scope, $window) {
 	
