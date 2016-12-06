@@ -79,33 +79,3 @@ app.service('SubjectsService', function (Subjects, $q, toaster) {
     self.getSubjects();
     return self;
 });
-
-pustackServices.factory('Chapters', function($http, $resource) {
-    return $resource('https://pustack.herokuapp.com' + '/api/chapters/:id/', {id: '@_id'}, {
-        update: {
-            method: 'PUT'
-        }
-    });
-});
-
-app.service('ChaptersService', function (Chapters, $q, toaster) {
-    var self =  {
-                    'chaptersList': [],
-                    'getChapters': function(){
-                        self.chaptersList = [];
-                        var params = {
-                            //'where': {"courseStandard": 10}
-                        };
-
-                        Chapters.get(params, function (data) {
-                            console.log(data.data[0]);
-                            angular.forEach(data.data, function (chapter) {
-                                self.chaptersList.push(new Chapters(chapter));
-                            });
-                        });
-                    }
-
-                };
-    self.getChapters();
-    return self;
-});
