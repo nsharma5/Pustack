@@ -37,13 +37,12 @@
 
   <div class="container" id = "lecturecont">
     <div class="row">
-
-      <div class="col-sm-4">
+      <div class="col-sm-4" ng-repeat="lecture in lectures.lectureList">
         <div class="wrapper">
           <div class="card radius shadowDepth1">
 
             <div class="card__image border-tlr-radius">
-              <img src="http://lorempixel.com/400/200/sports/" alt="image" class="border-tlr-radius">
+              <img src="{{lecture.imageURL}}" alt="image" class="border-tlr-radius">
             </div>
 
             <div class="card__content card__padding">
@@ -53,144 +52,23 @@
               </div>
 
               <div class="card__meta">
-                <a href="#">Divyam Gupta</a>
-                <time>17th March</time>
+                <a href="#">{{lecture.author}}</a>
               </div>
 
               <article class="card__article">
-                <h2><a href="#">The Rise of Nationalism in Europe</a></h2>
+                <h2><a href="#">{{lecture.name}}</a></h2>
                 <p>
-                  <span style = "font-size:15px;" class = "descrip">A historic journey exploring the French Revolution, unification...</span>
-                  <span><a  style = "font-size:15px; color: #388DB0;" href = "#">Read More</a></span>
+                  <span style = "font-size:15px;" class = "descrip">{{lecture.description}}</span>
+                  <span><a style = "font-size:15px; color: #388DB0;" href = "#">Read More</a></span>
                 </p>
               </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-sm-4">
-        <div class="wrapper">
-          <div class="card radius shadowDepth1">
 
-            <div class="card__image border-tlr-radius">
-              <img src="http://lorempixel.com/400/200/sports/" alt="image" class="border-tlr-radius">
-            </div>
-
-            <div class="card__content card__padding">
-
-              <div class="card__share">
-                <a id="share" class=" share-icon" href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
-              </div>
-
-              <div class="card__meta">
-                <a href="#">Divyam Gupta</a>
-                <time>17th March</time>
-              </div>
-
-              <article class="card__article">
-                <h2><a href="#">The Rise of Nationalism in Europe</a></h2>
-                <p>
-                  <span style = "font-size:15px;" class = "descrip">A historic journey exploring the French Revolution, unification...</span>
-                  <span><a  style = "font-size:15px; color: #388DB0;" href = "#">Read More</a></span>
-                </p>
-              </article>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="col-sm-4">
-        <div class="wrapper">
-          <div class="card radius shadowDepth1">
-
-            <div class="card__image border-tlr-radius">
-              <img src="http://lorempixel.com/400/200/sports/" alt="image" class="border-tlr-radius">
-            </div>
-
-            <div class="card__content card__padding">
-
-              <div class="card__share">
-                <a id="share" class=" share-icon" href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
-              </div>
-
-              <div class="card__meta">
-                <a href="#">Divyam Gupta</a>
-                <time>17th March</time>
-              </div>
-
-              <article class="card__article">
-                <h2><a href="#">The Rise of Nationalism in Europe</a></h2>
-                <p>
-                  <span style = "font-size:15px;" class = "descrip">A historic journey exploring the French Revolution, unification...</span>
-                  <span><a  style = "font-size:15px; color: #388DB0;" href = "#">Read More</a></span>
-                </p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-4">
-        <div class="wrapper">
-          <div class="card radius shadowDepth1">
-
-            <div class="card__image border-tlr-radius">
-              <img src="http://lorempixel.com/400/200/sports/" alt="image" class="border-tlr-radius">
-            </div>
-
-            <div class="card__content card__padding">
-
-              <div class="card__share">
-                 <a id="share" class=" share-icon" href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
-              </div>
-
-              <div class="card__meta">
-                <a href="#">Web Design</a>
-                <time>17th March</time>
-              </div>
-
-              <article class="card__article">
-                <h2><a href="#">Material Design Card - For Blog Post Article</a></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-4">
-        <div class="wrapper">
-          <div class="card radius shadowDepth1">
-
-            <div class="card__image border-tlr-radius">
-              <img src="http://lorempixel.com/400/200/sports/" alt="image" class="border-tlr-radius">
-            </div>
-
-            <div class="card__content card__padding">
-
-              <div class="card__share">
-                <a id="share" class=" share-icon" href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
-              </div>
-
-              <div class="card__meta">
-                <a href="#">Divyam Gupta</a>
-                <time>17th March</time>
-              </div>
-
-              <article class="card__article">
-                <h2><a href="#">The Rise of Nationalism in Europe</a></h2>
-                <p>
-                  <span style = "font-size:15px;" class = "descrip">A historic journey exploring the French Revolution, unification...</span>
-                  <span><a  style = "font-size:15px; color: #388DB0;" href = "#">Read More</a></span>
-                </p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
 
     </div>
-  </div>
   
 </div>
