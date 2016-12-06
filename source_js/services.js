@@ -62,22 +62,77 @@ pustackServices.factory('Subjects', function($http, $resource) {
 
 app.service('SubjectsService', function (Subjects, $q, toaster) {
     var self =  {
+                    'selectedSubject' : null,
                     'subjectsList': [],
+                    'ninthList': [],
+                    'tenthList': [],
                     'getSubjects': function(){
                         self.subjectsList = [];
                         var params = {
-                            //'where': {"courseStandard": 10}
+                            'where': {"courseStandard": 10}
                         };
 
                         Subjects.get(params, function (data) {
-                            console.log(data.data[0]);
+                            //console.log(data.data[0]);
                             angular.forEach(data.data, function (subject) {
                                 self.subjectsList.push(new Subjects(subject));
                             });
                         });
                     }
+                    /*'divide': function(){
+                        i = 0;
+                        for(;i < self.subjectsList.length;)
+                        {
+                            console.log(i);
+                            if (self.subjectsList[i].courseStandard == 9)
+                            {
+                                self.ninthList.push(self.subjectsList[i]);
+                                i++;
+                            }
+                            else
+                            {
+                                self.tenthList.push(self.subjectsList[i]);
+                                i++;
+                            }
+                        }
+                    }*/
 
                 };
     self.getSubjects();
+    //self.divide();
+    //console.log("hi", self.ninthList);
+    return self;
+});
+
+
+pustackServices.factory('Lectures', function($http, $resource) {
+    return $resource('https://pustack.herokuapp.com' + '/api/chapters/:id/', {id: '@_id'}, {
+        update: {
+            method: 'PUT'
+        }
+    });
+});
+
+app.service('LecturesService', function (Lectures, $q, toaster) {
+    var self =  {
+                    'selectedLecture' : null,
+                    'lectureList': [],
+                    'getLectures': function(subject){
+                        console.log(subject.chapters);
+                        self.lectureList = [];
+                        var params = {
+                            'where': {"_id": subject.chapters[0]}
+                        };
+
+                        Lectures.get(params, function (data) {
+                            angular.forEach(data.data[0], function (lecture) {
+                                self.lectureList.push(new Lectures(lecture));
+                                console.log(self.lectureList);
+                            });
+                        });
+                    }
+
+                };
+    //self.getLectures();
     return self;
 });
