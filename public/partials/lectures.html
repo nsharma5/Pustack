@@ -37,13 +37,12 @@
 
   <div class="container" id = "lecturecont">
     <div class="row">
-
-      <div class="col-sm-4">
+      <div class="col-sm-4" ng-repeat="subject in subjects.subjectsList[0]">
         <div class="wrapper">
           <div class="card radius shadowDepth1">
 
             <div class="card__image border-tlr-radius">
-              <img src="http://lorempixel.com/400/200/sports/" alt="image" class="border-tlr-radius">
+              <img src="{{subject.imageURL}}" alt="image" class="border-tlr-radius">
             </div>
 
             <div class="card__content card__padding">
@@ -53,21 +52,22 @@
               </div>
 
               <div class="card__meta">
-                <a href="#">Divyam Gupta</a>
-                <time>17th March</time>
+                <a href="#">{{subject.author}}</a>
               </div>
 
               <article class="card__article">
-                <h2><a href="#">The Rise of Nationalism in Europe</a></h2>
+                <h2><a href="#">{{subject.name}}</a></h2>
                 <p>
-                  <span style = "font-size:15px;" class = "descrip">A historic journey exploring the French Revolution, unification...</span>
-                  <span><a  style = "font-size:15px; color: #388DB0;" href = "#">Read More</a></span>
+                  <span style = "font-size:15px;" class = "descrip">{{subject.description}}</span>
+                  <span><a style = "font-size:15px; color: #388DB0;" href = "#">Read More</a></span>
                 </p>
               </article>
+
             </div>
           </div>
         </div>
       </div>
+
       
       <div class="col-sm-4">
         <div class="wrapper">
@@ -191,6 +191,5 @@
       </div>
 
     </div>
-  </div>
   
 </div>
