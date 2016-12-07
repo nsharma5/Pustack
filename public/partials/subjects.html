@@ -1,38 +1,59 @@
 <div ng-controller = "subjectController">
-	
+    
     <h2 class = "coursehead"> Subjects </h2>
 
-	<nav class="main-menu">
-		<ul>
-			<li>
-				<a href="#">
-                    <i class="fa fa-home fa-2x"></i>
+    <nav class="main-menu">
+        <ul class = "navi">
+
+           <li>
+                <a href>
+                    <i><img src="../media/logo.png"></i>
+                </a>      
+            </li> 
+            <li class = "sub">
+                <a href="#subjects">
+                    <i class="fa fa-book fa-2x"></i>
                     <span class="nav-text">Subjects</span>
-				</a>      
-			</li>
+                </a>      
+            </li>
 
-			<li class="has-subnav">
-				<a href="#">
-					<i class="fa fa-laptop fa-2x"></i>
-					<span class="nav-text">My Courses</span>
-				</a>       
-			</li>
+            <li class="has-subnav">
+                <a href="#mycourses">
+                    <i class="fa fa-bookmark fa-2x"></i>
+                    <span class="nav-text">My Courses</span>
+                </a>       
+            </li>
 
-			<li class="has-subnav">
-				<a href="#">
-					<i class="fa fa-list fa-2x"></i>
-					<span class="nav-text">User</span>
-				</a>
-			</li>		
-		</ul>
-	</nav>
+            <li class="has-subnav">
+                <a href>
+                    <i class="fa fa-user fa-2x"></i>
+                    <span class="nav-text">User</span>
+                </a>
+            </li>
+
+             <li class="has-subnav">
+                <a href="#/">
+                    <i class="fa fa-sign-out fa-2x"></i>
+                    <span class="nav-text">Log Out</span>
+                </a>
+            </li>
+
+            <li class="has-subnav">
+                <a href="#">
+                    <i class="fa fa-copyright fa-2x"></i>
+                    <span class="nav-text">PuStack</span>
+                </a>
+            </li>
+
+        </ul>
+    </nav>
 
     <div class="coursecat">
         <h4>9th Standard</h4>
     </div>
 
     <div class="carousel">
-        <div class="wrapper" ng-repeat="subject in subjects.subjectsList[0]">
+        <div class="wrapper" ng-repeat="subject in subjects.subjectsList[0]" ng-click="subjects.selectedSubject = subject">
             <div class="card radius shadowDepth1">
                 <div class="card__image border-tlr-radius">
                     <img src="{{subject.imageURL}}" alt="image" class="border-tlr-radius subimg">
@@ -40,16 +61,13 @@
 
                 <div class="card__content card__padding">
 
-                    <div class="card__share">
-                        <a id="share" class=" share-icon" href="#"><i class="fa fa-check" aria-hidden="true"></i></a>
-                    </div>
                     
                     <div class="card__meta">
-                        <a href="#">{{subject.author}}</a>
+                        <a href>{{subject.author}}</a>
                     </div>
 
                     <article class="card__article">
-                        <h2><a href="#lectures">{{subject.name}}</a></h2>
+                        <h2><a href="#lectures/{{subjects.selectedSubject._id}}">{{subject.name}}</a></h2>
                         <p>
                             <span style = "font-size:15px; width:30%;" class = "summary">{{subject.description}}</span>
                         </p>
@@ -65,7 +83,7 @@
     </div>
     
     <div class="carousel">
-        <div class="wrapper" ng-repeat="subject in subjects.subjectsList[0]">
+        <div class="wrapper" ng-repeat="subject in subjects.subjectsList[0]" ng-click="subjects.selectedSubject = subject">
             <div class="card radius shadowDepth1">
                 <div class="card__image border-tlr-radius">
                     <img src="{{subject.imageURL}}" alt="image" class="border-tlr-radius subimg">
@@ -73,16 +91,13 @@
 
                 <div class="card__content card__padding">
 
-                    <div class="card__share">
-                        <a id="share" class=" share-icon" href="#"><i class="fa fa-check" aria-hidden="true"></i></a>
-                    </div>
                     
                     <div class="card__meta">
-                        <a href="#">{{subject.author}}</a>
+                        <a href>{{subject.author}}</a>
                     </div>
 
                     <article class="card__article">
-                        <h2><a href="#lectures">{{subject.name}}</a></h2>
+                        <h2><a href="#lectures/{{subjects.selectedSubject._id}}">{{subject.name}}</a></h2>
                         <p>
                             <span style = "font-size:15px; width:30%;" class = "summary">{{subject.description}}</span>
                         </p>
@@ -98,7 +113,7 @@
     </div>
     
     <div class="carousel">
-        <div class="wrapper" ng-repeat="subject in subjects.subjectsList[0]">
+        <div class="wrapper" ng-repeat="subject in subjects.subjectsList[0]" ng-click="subjects.selectedSubject = subject">
             <div class="card radius shadowDepth1">
                 <div class="card__image border-tlr-radius">
                     <img src="{{subject.imageURL}}" alt="image" class="border-tlr-radius subimg">
@@ -106,16 +121,13 @@
 
                 <div class="card__content card__padding">
 
-                    <div class="card__share">
-                        <a id="share" class=" share-icon" href="#"><i class="fa fa-check" aria-hidden="true"></i></a>
-                    </div>
                     
                     <div class="card__meta">
-                        <a href="#">{{subject.author}}</a>
+                        <a href>{{subject.author}}</a>
                     </div>
 
                     <article class="card__article">
-                        <h2><a href="#lectures">{{subject.name}}</a></h2>
+                        <h2><a href="#lectures/{{subjects.selectedSubject._id}}">{{subject.name}}</a></h2>
                         <p>
                             <span style = "font-size:15px; width:30%;" class = "summary">{{subject.description}}</span>
                         </p>
@@ -131,7 +143,7 @@
     </div>
     
     <div class="carousel">
-        <div class="wrapper" ng-repeat="subject in subjects.subjectsList[0]">
+        <div class="wrapper" ng-repeat="subject in subjects.subjectsList[0]" ng-click="subjects.selectedSubject = subject">
             <div class="card radius shadowDepth1">
                 <div class="card__image border-tlr-radius">
                     <img src="{{subject.imageURL}}" alt="image" class="border-tlr-radius subimg">
@@ -139,16 +151,14 @@
 
                 <div class="card__content card__padding">
 
-                    <div class="card__share">
-                        <a id="share" class=" share-icon" href="#"><i class="fa fa-check" aria-hidden="true"></i></a>
-                    </div>
+                
                     
                     <div class="card__meta">
-                        <a href="#">{{subject.author}}</a>
+                        <a href>{{subject.author}}</a>
                     </div>
 
                     <article class="card__article">
-                        <h2><a href="#lectures">{{subject.name}}</a></h2>
+                        <h2><a href="#lectures/{{subjects.selectedSubject._id}}">{{subject.name}}</a></h2>
                         <p>
                             <span style = "font-size:15px; width:30%;" class = "summary">{{subject.description}}</span>
                         </p>
@@ -158,5 +168,4 @@
             </div>
         </div>
     </div>
-
 </div>

@@ -1,72 +1,110 @@
 <div ng-controller="videosController">
-	<ol class="breadcrumb">
+  <ol class="breadcrumb">
     <li><a href="#" class = "breadtrail">History</a></li>
-  	<li><a href="#" class = "breadtrail">Chapter 1</a></li>
+    <li><a href="#" class = "breadtrail">Chapter 1</a></li>
   </ol>
 
   <!--<div class="area"></div>-->
   <nav class="main-menu">
-    <ul>
-      <li class = "has-subnav">
-        <a href="#">
-          <i class="fa fa-home fa-3x"></i>
-          <span class="nav-text">Subjects</span>
-        </a>        
-      </li>
-          
-      <li class="has-subnav">
-        <a href="#">
-          <i class="fa fa-laptop fa-3x"></i>
-          <span class="nav-text">My Courses</span>
-        </a>  
-      </li>
-          
-      <li class="has-subnav">
-        <a href="#">
-          <i class="fa fa-list fa-3x"></i>
-          <span class="nav-text">User</span>
-        </a>  
-      </li>
-            
-      <li class="has-subnav">
-        <a href="#">
-          <i class="fa fa-copyright fa-3x"></i>
-          <span class="nav-text">PuStack</span>
-        </a>  
-      </li> 
-    </ul>
-  </nav>
-
-  <nav id="lecturemenu">
-    <h1>hello</h1>
-    <ul>
-      <li><a href="#">Chapter 1</a></li>
-      <li><a href="#">Chapter 2</a>
         <ul>
-          <li><a href="#">Lecture 1</a></li>
-          <li><a href="#">Lecture 2</a></li>
-          <li><a href="#">Lecture 3</a></li>
+
+           <li>
+                <a href>
+                    <i><img src="../media/logo.png"></i>
+                </a>      
+            </li> 
+            <li>
+                <a href="#subjects">
+                    <i class="fa fa-book fa-2x"></i>
+                    <span class="nav-text">Subjects</span>
+                </a>      
+            </li>
+
+            <li class="has-subnav">
+                <a href="#mycourses">
+                    <i class="fa fa-bookmark fa-2x"></i>
+                    <span class="nav-text">My Courses</span>
+                </a>       
+            </li>
+
+            <li class="has-subnav">
+                <a href>
+                    <i class="fa fa-user fa-2x"></i>
+                    <span class="nav-text">User</span>
+                </a>
+            </li>
+
+             <li class="has-subnav">
+                <a href="#/">
+                    <i class="fa fa-sign-out fa-2x"></i>
+                    <span class="nav-text">Log Out</span>
+                </a>
+            </li>
+
+            <li class="has-subnav">
+                <a href="#">
+                    <i class="fa fa-copyright fa-2x"></i>
+                    <span class="nav-text">PuStack</span>
+                </a>
+            </li>
+
         </ul>
-      </li>
-      <li><a href="/contact">Chapter 3</a></li>
-    </ul>
-  </nav>
+    </nav>
+
+  <div class="videoMenu">
+    <span><button class="fa fa-bars fa-2x" aria-hidden="true"></button></span>
+  </div>
+
+  <div id="lecturemenu">
+    <ul class="cd-accordion-menu animated">
+
+      <li class="has-children">
+      <input type="checkbox" name="group-1" id="group-1">
+      <label for="group-1">Chapter 1</label>
+
+      <ul>
+        <li><a href="#videos">Lecture 1</a></li>
+        <li><a href="#videos1">Lecture 2</a></li>
+        <li><a href="#videos2">Lecture 3</a></li>
+      </ul>
+    </li>
+
+    <li class="has-children">
+      <input type="checkbox" name="group-2" id="group-2">
+      <label for="group-2">Chapter 2</label>
+
+      <ul>
+        <li><a href="#videos">Lecture 1</a></li>
+        <li><a href="#videos">Lecture 2</a></li>
+      </ul>
+    </li>
+
+    <li class="has-children">
+      <input type="checkbox" name="group-3" id="group-3">
+      <label for="group-3">Chapter 3</label>
+
+      <ul>
+        <li><a href="#videos">Lecture 1</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  </div>
 
   <div class="holdvid">
-    <iframe class="divyam" src="https://www.youtube.com/embed/XGSy3_Czz8k"></iframe>
+    <iframe class="divyam" src="https://www.youtube.com/embed/BN_qrvMo-fU"></iframe>
   </div>
 
   <div class="vibut">
-    <button type="button" class="btn btn-primary">Previous</button> 
-    <button type="button" class="btn btn-primary right">Next</button>
+    <a href="#videos1/"><button type="button" class="btn btn-primary">Next</button><a>
   </div>
 
-  <script type="text/javascript" src="./lib/mmenu/dist/js/jquery.mmenu.all.min.js"></script>
-
-  <!-- Fire the plugin onDocumentReady -->
   <script type="text/javascript">
-    $(document).ready(function() {
-      $("#lecturemenu").mmenu();
+    $(document).ready( function() {
+      $('.videoMenu').click(function(){
+        $('#lecturemenu').toggle();
+      });
     });
   </script>
+
 </div> 

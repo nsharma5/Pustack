@@ -2,14 +2,26 @@
 
 
 /*INDEX PAGE*/
-.navbar-inverse{
-	opacity: 0.9;
-	background-color: white;
-	border-color: white;
+.navbar-inner{
+	height: 80px;
+	background-color: transparent !important;
 }
 
-.navbar-brand, .navbar-right li a{
-	font-size: 20px;
+.navbar-right {
+	margin-top: 1.5em !important;
+	font-size: 1em;
+}
+
+.navbar-right li{
+	background-color: transparent !important;
+}
+.sign{
+	font-size: 2em;
+}
+
+.navbar-brand img{
+	height: 200px;
+	margin-top: -40px;
 }
 
 #footer {
@@ -20,27 +32,77 @@
 	background-color: #282A2B;
 }
 
-
 .copy{
-    margin-left: 79px;
+    margin: 0 auto;
     color: white;
+    bottom: 0;
+	position: relative;
+	text-align: center;
+	width: 90%;
 }
 
 .copy .fa{
+	margin: 0 auto;
+	padding-left: 1em;
     padding-top: 23px;
 }
 
+.copy span{
+	margin: 0 auto;
+	display: inline-block;
+}
 /*LANDING*/
 
-.expanded{
-	background-image: url("../media/chicago.jpg");
-	min-height: 700px;
-    background-attachment: fixed;
+#chicago { 
+    /* The image used */
+    background-image: url("../media/applelanding.jpg");
+    height: 700px; 
+    background-attachment: absolute;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin: auto;
 }
+
+.holdvid1 {
+    position:relative;
+    width: 100%;
+    float: right;
+    margin-top: 1em;
+    overflow:hidden;
+    padding: 20%;
+}
+
+.landingvid {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 80%;
+    margin-left: -8px;
+    margin-top: 31px;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) { 
+	.landingvid {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 80%;
+    margin-left: -8px;
+    margin-top: 60px;
+}}
+
+@media (min-width: 768px) and (max-width: 991px) {
+.landingvid {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 80%;
+    margin-left: -8px;
+    margin-top: 120px;
+}}
 
 .landing {
     font-size: 12px;
@@ -66,6 +128,8 @@
 	.sign {
 		color: #03A9F4 !important;
 		background-color: #F5F5F5 !important;
+		padding: 1em !important;
+		margin-top: 1em !important;
 	}
 
 	#myModal {
@@ -87,9 +151,15 @@
 	}
 
 	.close {
-		z-index: 10000;
+		position: fixed;
+		z-index: 1000;
 		font-size: 30px !important;
-		color: black !important;
+		color: #000000 !important;
+		padding: 0 0.5em 0.5em 0.5em;
+	}
+
+	.alert {
+		display: none;
 	}
 
 	h2 {
@@ -176,6 +246,11 @@
 	    margin-left: 50%;
 	    position: absolute;
 	    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+	    @media (max-width: 600px) {
+			width: 100%;
+			margin-left: 0% !important;
+	    }
 	}
 
 	.toplam {
@@ -184,6 +259,11 @@
 	    position: relative;
 	    left: 0;
 	    left: -100%;
+
+	    @media (max-width: 600px) {
+			width: 100%;
+			left: 0%;
+	    }
 	}
 
 	.left {
@@ -192,6 +272,11 @@
 	    background: #2C3034;
 	    left: 0;
 	    position: absolute;
+
+	    @media (max-width: 600px) {
+			width: 100%;
+			left: -100%;
+	    }
 	}
 
 	.right {
@@ -200,6 +285,10 @@
 	    background: #F9F9F9;
 	    right: 0;
 	    position: absolute;
+
+	    @media (max-width: 600px) {
+			width: 100%;
+	    }
 	}
 
 	#ic {
@@ -227,14 +316,14 @@
 	form#girisyap input {
 	    border-bottom: 1px solid #cdcdcd;
 	    color: #959595;
-	    font-size: 20px;
+	    font-size: 14px;
 	    width: 100%;
 	    resize: none;
 	    max-height: 25px;
 	    outline: 0;
 	    border-left: 0;
 	    border-right: 0;
-	    padding: 8px 0;
+	    padding: 8px 0 0 3px;
 	    margin-top: 20px !important;
 	    background: none;
 	    border-top: 0;
@@ -349,29 +438,39 @@
 	    width: 100%;
 	    height: 100%;
 	    position: absolute;
-	    z-index: -90;
+
+	    @media (max-width: 600px) {
+			display: none;
+	    }
 	}
 
 	.girisback {
 	    position: absolute;
-	    z-index: 2000;
 	    right: 0;
 	    width: 50%;
 	    height: 100%;
+	    z-index: -90;
 	    background: #03A9F4 url(http://ertekinn.com/loginsignup/signup.jpg);
 	    background-size: cover;
 	    //background-position: 50% 50%;
+
+	   	@media (max-width: 600px) {
+			display: none;
+	    }
 	}
 
 	.kayitback {
 	    position: absolute;
-	    z-index: 2000;
 	    left: 0;
 	    width: 50%;
 	    height: 100%;
 	    background: #03A9F4 url(http://ertekinn.com/loginsignup/login.png);
 	    background-size: cover;
 	    background-position: 50% 50%;
+
+	    @media (max-width: 600px) {
+			display: none;
+	    }
 	}
 }
 
@@ -462,8 +561,8 @@ overflow:visible;
 }
 
 .main-menu {
-background-image: -webkit-gradient(radial, center center, 0, center center, 286, color-stop(0, #959595), color-stop(76, #4E4E4E), color-stop(87, #383838), color-stop(100, #1b1b1b));
-border-right:1px solid #e5e5e5;
+background-color: #A7ACB0;
+-webkit-box-shadow: 6px 4px 21px -1px rgba(0,0,0,0.75);
 position:absolute;
 top:0;
 bottom:0;
@@ -543,20 +642,31 @@ padding:0;
 }
 
 li:nth-child(1) {
-  background-color: #00101E;
+  margin-top: -100px;
+  width: 250px;
+  margin-left: -8px;
 }
 
 li:nth-child(2) {
-  background-color: #0D263D;
+  background-color: #00101E;
+  margin-top:45px;
 }
 
 li:nth-child(3) {
-  background-color: #053145;
+  background-color: #0D263D;
 }
 
 li:nth-child(4) {
+  background-color: #053145;
+}
+
+li:nth-child(5) {
+  background-color: #00101E;
+}
+
+li:nth-child(6) {
 	background-color: #282A2B;
-	margin-top: 240px;
+	margin-top: 115px;
 	height: 71px !important;
 }
     
@@ -582,6 +692,19 @@ li:nth-child(4) {
     background-color: transparent !important;
 }
 
+@media (max-width: 543px) { 
+	.breadcrumb li:nth-child(1){
+    margin-left: 40px;
+    font-size: 28px;
+    background-color: transparent !important;
+}}
+
+@media (max-width: 543px) { 
+	.breadcrumb li:nth-child(1){
+    margin-left: 40px;
+    font-size: 28px;
+    background-color: transparent !important;
+}}
 
 .breadcrumb .breadtrail{
     color: black;
@@ -591,7 +714,7 @@ li:nth-child(4) {
     margin-top: 13px;
 }
 
-.btn-success{
+#btn-success{
     float: right;
     margin-right: 40px;
 }
@@ -684,14 +807,243 @@ a:hover {
 
 /*******************************************/
 /***************VIDEOS********************/
+
+.videoMenu {
+	margin-left: 5em;
+}
+
 #lecturemenu {
-	margin-left: 600px;
-	color: black;
+	margin-left: 5em;
+	margin-top: 1em;
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	width: 20%;
+	
+	ul {
+  		list-style: none;
+	}
+
+	body {
+	  font-family: sans-serif;
+	  color: #ffffff;
+	  background-color: #f0f0f0;
+	  -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+	}
+
+	a {
+	  text-decoration: none;
+	}
+
+	.cd-accordion-menu {
+	  width: 15%;
+	  background: #4d5158;
+	  box-shadow: 0 4px 40px #053145;
+	  position: fixed;
+	  z-index: 1000;
+	}
+
+	.cd-accordion-menu ul {
+	  /* by default hide all sub menus */
+	  
+	  display: none;
+	}
+
+	.cd-accordion-menu li {
+	  -webkit-user-select: none;
+	  -moz-user-select: none;
+	  -ms-user-select: none;
+	   user-select: none;
+	   font-size: 1em;
+
+	   		.has-children {
+	   			li:nth-child(1) {
+	  			background-color: #00101E;
+			}
+
+			li:nth-child(2) {
+			  background-color: #0D263D;
+			}
+
+			li:nth-child(3) {
+			  background-color: #053145;
+			}
+
+			li:nth-child(4) {
+			  background-color: #00101E;
+			}
+		}
+	}
+
+	.cd-accordion-menu input[type=checkbox] {
+	  /* hide native checkbox */
+	  
+	  position: absolute;
+	  opacity: 0;
+	}
+
+	.cd-accordion-menu label,
+	.cd-accordion-menu a {
+	  position: relative;
+	  display: block;
+	  padding: 0.5em 0.5em 0.5em 1.5em;
+	  box-shadow: inset 0 -1px #565a60;
+	  color: #ffffff;
+	  font-size: 1em;
+	}
+
+	.no-touch .cd-accordion-menu label:hover,
+	.no-touch .cd-accordion-menu a:hover {
+	  background: #52565d;
+	}
+
+	.cd-accordion-menu label::before,
+	.cd-accordion-menu label::after,
+	.cd-accordion-menu a::after {
+	  /* icons */
+	  
+	  content: '';
+	  display: inline-block;
+	  width: 16px;
+	  height: 16px;
+	  position: absolute;
+	  top: 50%;
+	  -webkit-transform: translateY(-50%);
+	  -moz-transform: translateY(-50%);
+	  -ms-transform: translateY(-50%);
+	  -o-transform: translateY(-50%);
+	  transform: translateY(-50%);
+	}
+
+	.cd-accordion-menu label {
+	  cursor: pointer;
+	}
+
+	.cd-accordion-menu label::before,
+	.cd-accordion-menu label::after {
+	  background-image: url(https://codyhouse.co/demo/multi-level-accordion-menu/img/cd-icons.svg);
+	  background-repeat: no-repeat;
+	}
+
+	.cd-accordion-menu label::before {
+	  /* arrow icon */
+	  
+	  left: 0em;
+	  background-position: 0 0;
+	  -webkit-transform: translateY(-50%) rotate(-90deg);
+	  -moz-transform: translateY(-50%) rotate(-90deg);
+	  -ms-transform: translateY(-50%) rotate(-90deg);
+	  -o-transform: translateY(-50%) rotate(-90deg);
+	  transform: translateY(-50%) rotate(-90deg);
+	}
+
+	.cd-accordion-menu label::after {
+	  /* folder icons */
+	  display: none;
+	  
+	}
+
+	.cd-accordion-menu a::after {
+
+	}
+
+	.cd-accordion-menu input[type=checkbox]:checked + label::before {
+	  /* rotate arrow */
+	  
+	  -webkit-transform: translateY(-50%);
+	  -moz-transform: translateY(-50%);
+	  -ms-transform: translateY(-50%);
+	  -o-transform: translateY(-50%);
+	  transform: translateY(-50%);
+	}
+
+	.cd-accordion-menu input[type=checkbox]:checked + label::after {
+	  /* show open folder icon if item is checked */
+	  
+	  //background-position: -32px 0;
+	}
+
+	.cd-accordion-menu input[type=checkbox]:checked + label + ul,
+	.cd-accordion-menu input[type=checkbox]:checked + label:nth-of-type(n) + ul {
+	  /* use label:nth-of-type(n) to fix a bug on safari (<= 8.0.8) with multiple adjacent-sibling selectors*/
+	  /* show children when item is checked */
+	  
+	  display: block;
+	}
+
+	.cd-accordion-menu ul label,
+	.cd-accordion-menu ul a {
+	  //background: #35383d;
+	  box-shadow: inset 0 -1px #41444a;
+	  //padding-left: 82px;
+	}
+
+	.no-touch .cd-accordion-menu ul label:hover,
+	.no-touch .cd-accordion-menu ul a:hover {
+	  background: #3c3f45;
+	}
+
+	.cd-accordion-menu > li:last-of-type > label,
+	.cd-accordion-menu > li:last-of-type > a,
+	.cd-accordion-menu > li > ul > li:last-of-type label,
+	.cd-accordion-menu > li > ul > li:last-of-type a {
+	  box-shadow: none;
+	}
+
+	.cd-accordion-menu ul label::before {
+	  left: 36px;
+	}
+
+	.cd-accordion-menu ul ul label,
+	.cd-accordion-menu ul ul a {
+	  padding-left: 100px;
+	}
+
+	.cd-accordion-menu ul ul label::before {
+	  left: 54px;
+	}
+
+	.cd-accordion-menu ul ul label::after,
+	.cd-accordion-menu ul ul a::after {
+	  left: 77px;
+	}
+
+	.cd-accordion-menu ul ul ul label,
+	.cd-accordion-menu ul ul ul a {
+	  padding-left: 118px;
+	}
+
+	.cd-accordion-menu ul ul ul label::before {
+	  left: 72px;
+	}
+
+	.cd-accordion-menu ul ul ul label::after,
+	.cd-accordion-menu ul ul ul a::after {
+	  left: 95px;
+	}
+
+	@media only screen and (min-width: 600px) {
+	  .cd-accordion-menu label, .cd-accordion-menu a {
+	    padding: 0.5em 0.5em 0.5em 1.5em;
+	    font-size: 1em;
+	  }
+	  
+}
+
+	.cd-accordion-menu.animated label::before {
+	  /* this class is used if you're using jquery to animate the accordion */
+	  
+	  -webkit-transition: -webkit-transform 0.3s;
+	  -moz-transition: -moz-transform 0.3s;
+	  transition: transform 0.3s;
+	}
 }
 
 .holdvid {
-    position:relative;
+    position: relative;
     width: 85%;
+    z-index: 10;
     float: right;
     margin-top: 1em;
     overflow:hidden;
@@ -709,9 +1061,10 @@ a:hover {
 .vibut {
 	width: 21%;
 	margin: 0 auto;
-	
+	text-align: center;
+
 	.right {
-		float: right;
+		float: right !important;
 	}
 	
 }

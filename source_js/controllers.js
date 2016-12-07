@@ -29,17 +29,35 @@ pustackControllers.controller('subjectController', ['$scope', '$http', '$window'
     //console.log("here", $scope.users.loggedUser);
   };
 
+  $scope.standardFilter = function(subject){
+    return (subject.courseStandard == 9);
+  };
+
 }]);
 
-pustackControllers.controller('lectureController', ['$scope', '$window', function($scope, $window) {
-	
+pustackControllers.controller('lectureController', ['$scope', '$http', '$window' , 'UsersService' , 'SubjectsService' , 'LecturesService' , function($scope, $http, $window, UsersService, SubjectsService, LecturesService) {
+  
+  $scope.users    = UsersService;
+  $scope.subjects = SubjectsService;
+  $scope.lectures = LecturesService;
+
+  $scope.lectures.getLectures($scope.subjects.selectedSubject);
+
 }]);
 
 pustackControllers.controller('mycoursesController', ['$scope', '$window', function($scope, $window) {
-	
+  
 }]);
 
 
-pustackControllers.controller('videosController', ['$scope', '$window', function($scope, $window) {
-	
+pustackControllers.controller('videosController', ['$scope', '$http', '$window' , 'UsersService' , 'SubjectsService' , 'LecturesService' , 'VideosService' , function($scope, $http, $window, UsersService, SubjectsService, LecturesService, VideosService) {
+  
+  $scope.users    = UsersService;
+  $scope.subjects = SubjectsService;
+  $scope.lectures = LecturesService;
+  $scope.videos   = VideosService;
+
+  //$scope.videos.getLectures($scope.lectures.selectedLecture);
+
 }]);
+
