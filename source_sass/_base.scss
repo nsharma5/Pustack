@@ -502,7 +502,7 @@
 
 @media (max-width: 543px){
 	.coursecat {
-		margin-left: 4em;
+		margin-left: 5em;
 	}
 
 	.carousel {
@@ -641,30 +641,31 @@ margin:0;
 padding:0;
 }
 
-li:nth-child(1) {
+.vidlogo {
   margin-top: -100px;
-  width: 250px;
-  margin-left: -8px;
+  width: 400px;
+  margin-left: 6px;
+  
 }
 
-li:nth-child(2) {
+.vidsub{
   background-color: #00101E;
   margin-top:45px;
 }
 
-li:nth-child(3) {
+.vidcourse {
   background-color: #0D263D;
 }
 
-li:nth-child(4) {
+.viduser {
   background-color: #053145;
 }
 
-li:nth-child(5) {
+.vidlog {
   background-color: #00101E;
 }
 
-li:nth-child(6) {
+.vidcopy{
 	background-color: #282A2B;
 	margin-top: 115px;
 	height: 71px !important;

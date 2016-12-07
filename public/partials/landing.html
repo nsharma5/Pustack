@@ -143,6 +143,14 @@
 
       $('.girisback').css('z-index', 'auto');
 
+      $('#login_submit').click(function() {
+        console.log("got in here");
+        // Coding
+        //$('#myModal').modal('toggle'); //or  $('#IDModal').modal('hide');
+        $('body').removeClass('modal-open');
+
+      });
+
     });
 
     $('#moveright').click(function() {
@@ -157,13 +165,6 @@
       $('#signup_submit').click( function() {
         alert('New User Created!');
       });
-    });
-
-    $('#login_submit').submit(function() {
-      console.log("got in here");
-      // Coding
-      $('#myModal').modal('toggle'); //or  $('#IDModal').modal('hide');
-
     });
   </script>
 </div>
